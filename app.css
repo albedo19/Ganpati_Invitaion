@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{margin: 0;}
+body{
+    margin: 0;
+    background-image: linear-gradient(to right,#003366,rgb(231, 223, 223));
+    
+}
 /* font-family: 'Lobster', cursive;
 font-family: 'Lugrasimo', cursive;
 font-family: 'Pangolin', cursive;
@@ -11,15 +15,17 @@ font-family: 'Permanent Marker', cursive;
 font-family: 'Qwitcher Grypen', cursive;
 font-family: 'Roboto Slab', serif; */
 .head{
-    font-family: 'Permanent Marker', cursive;
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 2rem;
+    
+}
+.header{
+    width: 100%;
+    padding: 0.5rem 0.7rem;
 }
 
 .extra-space{
     height: 6rem;
 }
+
 
 .card-bg1{
     margin: 0rem 1rem;
@@ -47,6 +53,7 @@ font-family: 'Roboto Slab', serif; */
 }
 
 .wish-statement{
+    font-size: 1.3rem;
     text-align: center;
     color: white;
     font-family: 'Courier New', Courier, monospace;
@@ -56,6 +63,7 @@ font-family: 'Roboto Slab', serif; */
 .animation{
     color: white;
     font-size: 0.90rem;
+    font-family: 'Roboto Slab', serif;
     margin-bottom: 0;
     position: relative;
     text-align: center;
@@ -81,10 +89,17 @@ font-family: 'Roboto Slab', serif; */
 .venue{
     margin-bottom: 100px;
 }
-.date-line>span, .venue>span{
-    font-size: 0.8rem;
+.date-line>span{
+    font-size: 1.2rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
     /* text-decoration: underline;
     text-decoration-style: wavy; */
+}
+.venue>span{
+    font-size: 0.8rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
 }
 hr{
     width: 90%;
@@ -134,8 +149,9 @@ hr{
     min-width: 150px;
     font-size: 0.65rem;
     padding: 3px;
-    font-family: 'Pangolin', cursive;
+    /* font-family: 'Pangolin', cursive; */
     text-align: justify;
+    font-family: 'Lora', serif;
 }
 .read-more{
     --bs-btn-padding-y: .25rem; 
@@ -154,6 +170,7 @@ hr{
     max-width: 250px;
     max-height: 250px;
     transition: all ;
+    border-radius: 25% 0;
 }
 .outter-div{
     position: relative;
@@ -190,11 +207,19 @@ hr{
     flex-basis: 50%;
 }
 
-.column h4{
+.column h5{
     color: #3c0150;
     padding-left: 2rem;
     font-family: 'Lugrasimo', cursive;
     font-weight: 700;
+}
+.column hr{
+    color: black;
+    background-color: black;
+    border-width: 0;
+    height: 2px;
+    opacity: 0.75;
+    margin-bottom: 0.5rem;
 }
 
 .contact.icon-list>li>a{
@@ -233,3 +258,29 @@ ul>li:hover{
     margin-left: 6px;
 }
 
+@media (max-width:450px) {
+    .Footer{
+        display: block;
+    }
+    .connect>ul{
+        display: flex;
+        padding-left: 0;
+    }
+    .connect>ul>li{
+        margin: 0 1.5rem;
+    }
+    .connect>ul>li>a{
+        opacity: 0.7;
+    }
+    .connect>ul>li>a:hover{
+        opacity: 1;
+    }
+    .connect>ul>li>span{
+        display: none;
+    }
+
+}
+.column>ul>li>a:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
